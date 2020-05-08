@@ -15,7 +15,24 @@ These can be bought with with or without I2C modules attached. I got mine as par
 A serial protocol for embedded devices see https://en.wikipedia.org/wiki/I%C2%B2C
 
 # What does this do?
-
 This
 
+<img src="./Board.jpg">
 
+# Docs
+
+## LCD I2C Library
+
+https://www.arduinolibraries.info/libraries/liquid-crystal-i2-c
+
+## Pins
+
+* A4  -> SDA
+* A5  -> SCL
+* 5V  -> VCC
+* GND -> GND
+
+## Refs
+
+https://create.arduino.cc/projecthub/Oniichan_is_ded/lcd-i2c-tutorial-664e5a
+https://www.arduino.cc/en/reference/wire
