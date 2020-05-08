@@ -2,7 +2,7 @@
 
 ## Is this
 
-Hello Wolld on an I2C 1602 Display
+An Arduino "Hello World" on an I2C 1602 Display
 
 ## What's a 1602?
 
