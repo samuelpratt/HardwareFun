@@ -12,7 +12,7 @@ This is it running.
 
 <img src="./Running.jpg">
 
-The white thing on the bottom left is my heating controller. It's there as a reference as I assume the thermometer inside is vauguely accurate.
+The white thing on the bottom left is my heating controller. It's there as a reference as I assume the thermometer inside is vaguely accurate.
 
 # Circuit
 
