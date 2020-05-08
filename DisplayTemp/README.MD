@@ -17,3 +17,5 @@ The white thing on the bottom left is my heating controller. It's there as a ref
 # Circuit
 
 <img src="./Circuit.jpg">
+
+BTW this has a mistake: VCC on the 1602 should be connected to +5v!
