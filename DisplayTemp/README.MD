@@ -6,8 +6,12 @@ An Arduino thermometer.
 
 It reads the temp via a termistor and displays it on a i2c enabled 1602 display
 
-# Image
+# In action
 
 This is it running
 
 <img src="./Running.jpg">
+
+# Circuit
+
+<img src="./Circuit.jpg">
