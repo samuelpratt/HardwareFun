@@ -2,12 +2,14 @@
 
 ## WiFi?
 
-Yes. Specifically an ESP-01 board with a ESP8255 chipset.
+Yes. Specifically an ESP-01 board with a ESP8266 chipset.
 
 ## What are we doing
 
 * Power up the ESP-01 with the Serial passed through to The Arduino
 * Send some AT (modem) commands to the Chipset
+
+Essentially we're using the Arduino as a USB->Serial adaptor so that we can send serial commands directly to the serial interface on the ESP8266 chip.
 
 # Set-up
 
