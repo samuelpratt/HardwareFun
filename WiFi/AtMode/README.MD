@@ -59,7 +59,8 @@ WARNING: You shoudn't really do this. The TX and RX pins on the ESP-01 are 3.3V,
 
 # Reference
 
-See http://www.pridopia.co.uk/pi-doc/ESP8266ATCommandsSet.pdf
+* http://www.pridopia.co.uk/pi-doc/ESP8266ATCommandsSet.pdf
+* https://github.com/Edragon/Datasheet/blob/master/ESP8266/4b-esp8266_at_command_examples_en.pdf
 
 ## Reset
 
@@ -172,4 +173,6 @@ Transfer-Encoding: chunked
 
 ### Close the connection
 
+```
 AT+CIPCLOSE
+```
