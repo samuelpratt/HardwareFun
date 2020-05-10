@@ -61,7 +61,7 @@ When you remove the voltage the WiFi chip powers down, the idea being to save po
 
 <img src="Image.jpg">
 
-# Commands
+# Basic Commands
 
 # Reference
 
@@ -141,9 +141,9 @@ AT+CIFSR
 
 OK
 ```
-## Request a URL
+# Request a URL
 
-### Set the connection mode
+## Set the connection mode
 
 The Serial interface can support 4x logical connections. If you have logical connections you have to supply
 a connection no. to the subsiquent calls.
@@ -157,13 +157,13 @@ AT+CIPMUX=0
 OK
 ```
 
-### Connect
+## Connect
 
 ```
 AT+CIPSTART="TCP","www.google.com",80
 ```
 
-### Send the request string
+## Send the request string
 
 ```
 AT+CIPSEND=28 //String is 24 + 4 extra bytes for 2x "\r\n" newlines
@@ -188,7 +188,7 @@ Vary: Accept-Encoding
 Transfer-Encoding: chunked
 ```
 
-### Close the connection
+## Close the connection
 
 ```
 AT+CIPCLOSE
