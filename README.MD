@@ -2,6 +2,8 @@
 
 Fun with electronics... featuring a Raspberry Pi and and a (clone) Arduino.
 
+Started to pass the time during the early 2020 COVID-19 Lockdown.
+
 <img src="Boards.jpg">
 
 # Stuff I bought
@@ -10,7 +12,9 @@ Fun with electronics... featuring a Raspberry Pi and and a (clone) Arduino.
 
 Arduino's are educational development boards. See https://www.arduino.cc/
 
-I bought a clone Uno R3 https://www.amazon.co.uk/dp/B01EWOE0UU
+You can either get their official boards or buy clones (the desing and firmware are all open source). If you do get a clone board (because they're cheaper) consider donating some money to Arduino 
+
+I bought a clone Uno R3 https://www.amazon.co.uk/dp/B01EWOE0UU made by Elegoo. 
 
 ## Electronics Starter kit
 
@@ -20,13 +24,15 @@ The only thing to note Rasperry Pi kits tend to come with a breakout adaptor for
 
 I bought this one: https://www.amazon.co.uk/Freenove-Raspberry-Beginner-Processing-Tutorials/dp/B06WP7169Y
 
+Note the instructions tend to be pretty basic and usually don't explain why you're doing what you're doing. I would personally throw them away and do some googling.
+
 ## WiFi
 
 Depends which board you're using.
 
 ### Arduino
 
-This can get a bit complicated. Easiest option is to buy a Arduino with Wifi built in. For more fun you can use a module such as an ESP-01: https://www.amazon.co.uk/MakerHawk-ESP8266-ESP-01S-Transceiver-Arduino-As-Shown/dp/B0728CBGKT
+This can get a bit complicated. Easiest option is to buy a Arduino with Wifi built in. For more fun you can use a module such as an ESP-01: https://www.amazon.co.uk/MakerHawk-ESP8266-ESP-01S-Transceiver-Arduino-As-Shown/dp/B0728CBGKT and speak to it via Serial.
 
 ### Raspbery PI
 
