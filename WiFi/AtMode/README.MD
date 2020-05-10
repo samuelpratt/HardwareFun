@@ -44,8 +44,12 @@ WARNING: You shoudn't really do this. The TX and RX pins on the ESP-01 are 3.3V,
 * 0 -> RX
 * 1 -> TX# Reference
 * 3V3 -> VCC
-* 3VC -> EN (Marked as EN on some boards and CH_DN on others)
+* 3V3 -> CH_PD (Marked as EN for 'Enable' on some boards, including mine)
 * GND -> GND
+
+## What's the CH_PD pin for?
+
+When you remove the voltage the WiFi chip powers down, the idea being to save power if you running of a battery etc.
 
 ## Schematic
 
