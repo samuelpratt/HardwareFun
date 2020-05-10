@@ -64,7 +64,9 @@ WARNING: You shoudn't really do this. The TX and RX pins on the ESP-01 are 3.3V,
 
 ## Reset
 
+```
 AT+RST
+```
 
 ## Set Mode
 
@@ -72,8 +74,13 @@ AT+RST
 * AP = 2
 * Both = 3
 
+```
 AT+CWMODE=1
+```
+To read it back
+```
 AT+CWMODE?
+```
 
 ## Read IP
 
@@ -89,6 +96,8 @@ OK
 ## List Networks
 
 ```
+AT+CWLAP
+
 +CWLAP:(4,"broadway",-64,"b0:be:76:9e:11:6c",1,-54,0)
 +CWLAP:(3,"BTWholeHome-3PM",-47,"0c:8e:29:51:40:51",1,-44,0)
 +CWLAP:(3,"BTWholeHome-3PM",-63,"0c:8e:29:51:41:9d",1,-37,0)
@@ -107,6 +116,8 @@ OK
 +CWLAP:(3,"broadway",-62,"1c:b7:2c:a6:e3:58",10,-56,0)
 +CWLAP:(3,"broadway_guest",-62,"1c:b7:2c:a6:e3:59",10,-57,0)
 +CWLAP:(3,"Guest 4",-82,"ee:f4:51:d9:49:78",1,-52,0)
+
+OK
 ```
 
 ## Join a network
