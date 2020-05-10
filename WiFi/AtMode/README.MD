@@ -143,7 +143,7 @@ OK
 ```
 ## Request a URL
 
-## Set the connection mode
+### Set the connection mode
 
 The Serial interface can support 4x logical connections. If you have logical connections you have to supply
 a connection no. to the subsiquent calls.
