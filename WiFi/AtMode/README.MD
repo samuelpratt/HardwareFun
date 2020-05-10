@@ -123,3 +123,53 @@ AT+CIFSR
 
 OK
 ```
+## Request a URL
+
+## Set the connection mode
+
+The Serial interface can support 4x logical connections. If you have logical connections you have to supply
+a connection no. to the subsiquent calls.
+
+* 0 = No mux
+* 1 = Mux
+
+```
+AT+CIPMUX=0
+
+OK
+```
+
+### Connect
+
+```
+AT+CIPSTART="TCP","www.google.com",80
+```
+
+### Send the request string
+
+```
+AT+CIPSEND=28 //String is 24 + 4 extra bytes for 2x "\r\n" newlines
+GET /index.html HTTP/1.1(return)
+(return)
+```
+At this point we start to get the result from the server
+```
++IPD,1430:HTTP/1.1 200 OK
+Date: Sun, 10 May 2020 21:48:19 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Server: gws
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: 1P_JAR=2020-05-10-21; expires=Tue, 09-Jun-2020 21:48:19 GMT; path=/; domain=.google.com; Secure
+Set-Cookie: NID=204=SwFybZgc-BDHW91qWXBrZM6k9q2PknpKnDkWgRsgg8F7ramQ2isYYfZYP6pCMadXTp3xj7WuVTx19gA_fxWWKbqSoqVUNU-TdbYX5EI2amAidutqDyaWBa-CyyF94Bd0lkPbYxyBLdBXSj3rncT41CwsvFdCaVcf5HG_5SPhphs; expires=Mon, 09-Nov-2020 21:48:19 GMT; path=/; domain=.google.com; HttpOnly
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+```
+
+### Close the connection
+
+AT+CIPCLOSE
