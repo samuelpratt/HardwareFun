@@ -34,6 +34,8 @@ Depends which board you're using.
 
 This can get a bit complicated. Easiest option is to buy a Arduino with Wifi built in. For more fun you can use a module such as an ESP-01: https://www.amazon.co.uk/MakerHawk-ESP8266-ESP-01S-Transceiver-Arduino-As-Shown/dp/B0728CBGKT and speak to it via Serial.
 
+Interestingly, the ESP8266 chip contains a 32bit RISC CPU and is actually a fair bit more powerfull than the 8bit conroller on the UNO! You can actually re-flash the contoller using 3rd party firmware and run C++ directly on it. See https://en.wikipedia.org/wiki/NodeMCU for more details.
+
 ### Raspbery PI
 
 This is pretty easy.
