@@ -1,14 +1,12 @@
 #include "SoftwareSerial.h"
 
-
-
 #define RXPIN 6
 #define TXPIN 7
 
 String host = "www.google.com";
 
-String ssid = "";
-String password =  "";
+String ssid = "xxxxxxxx";
+String password =  "xxxxxxxxxx";
 
 SoftwareSerial esp(RXPIN, TXPIN);
 
@@ -18,9 +16,16 @@ void join() {
   Serial.println("Reseting WiFi");
   esp.println("AT+RST");
   if(esp.find("ready")) {
-    Serial.println("Module Reset");
+    Serial.println("Module Reset OK");
   }
-  delay(10000);
+  //Let the WiFi come up if it's configured
+  Serial.print("Waiting for WiFi to start-up");
+  for(int i=0; i<20; i++) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+
 
   Serial.println("Setting Station Mode");
   esp.println("AT+CWMODE=1");
@@ -30,7 +35,6 @@ void join() {
   
   Serial.println("Joining WiFi");
   String join = "AT+CWJAP=\"" + ssid + "\",\"" + password + "\"";
-  Serial.println(join);
   esp.println(join);
   if(esp.find("WIFI GOT IP")) {
     Serial.println("Joined OK");
@@ -40,13 +44,14 @@ void join() {
 
 void getUrl()
 {
-  esp.println("");
+  esp.println("Seting connection multiplex off");
   esp.println("AT+CIPMUX=0");
   if(esp.find("OK")) {
     Serial.println("Mux Set to 0");
   }
+
+  Serial.println("Connecting to host " + host);
   esp.println("AT+CIPSTART=\"TCP\",\""+ host + "\",80");
-  Serial.println("AT+CIPSTART=\"TCP\",\""+ host + "\",80");
   if(esp.find("OK")) {
     Serial.println("Connected to " + host);
   }
@@ -61,13 +66,31 @@ void getUrl()
     Serial.println("Sent request OK");
   }
   esp.find("+IPD,");
-  int c;
-  for(int i=0; i<10000; i++) {
+
+  int c = 0;
+  Serial.print("Got '");
+  while(true) {
+    c = esp.read();
+    if((char)c == ':') {
+      break;
+    }
+    if(c != -1) {
+      Serial.print((char)c);
+    }
+  }
+  Serial.println("' bytes");
+
+  for(int i=0; i<20000; i++) {
     c = esp.read();
     if(c != -1) {
       Serial.print((char)c);
     }
   }
+  Serial.println("");
+  
+  Serial.println("Closing connection");
+  esp.println("AT+CIPCLOSE");
+  
 }
 
 
@@ -84,6 +107,12 @@ void loop() {
 
   join();
   getUrl();
-  delay(2000);
+  
+  Serial.print("Sleeping ");
+  for(int i=0; i<20; i++) {
+    delay(500);
+    Serial.print("z");
+  }
+  Serial.println("");
 }
   
