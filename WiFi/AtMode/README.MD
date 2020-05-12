@@ -35,7 +35,7 @@ See https://www.instructables.com/id/Getting-Started-With-the-ESP8266-ESP-01/
 
 ## Settings
 
-* Speed: 115200 baud (Depends on your board, varies from factory)
+* Speed: 9600 or 115200 baud (Depends on your board, varies from factory)
 * Line endings: Both NL+CR
 
 ## Pins
@@ -86,7 +86,9 @@ AT+UART_CUR=9600,8,1,0,0
 
 ### Rate in NV Ram
 (Will still apply on reboot)
+```
 AT+UART_DEF=9600,8,1,0,0
+```
 
 ## Set Mode
 
