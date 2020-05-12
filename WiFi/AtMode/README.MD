@@ -74,6 +74,20 @@ When you remove the voltage the WiFi chip powers down, the idea being to save po
 AT+RST
 ```
 
+## Set Baud rate
+
+Depends on your board version. Usually: -
+
+### Current Rate
+(Doesn't survive a reboot)
+```
+AT+UART_CUR=9600,8,1,0,0
+```
+
+### Rate in NV Ram
+(Will still apply on reboot)
+AT+UART_DEF=9600,8,1,0,0
+
 ## Set Mode
 
 * Station = 1
