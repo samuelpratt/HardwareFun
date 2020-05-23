@@ -1,5 +1,4 @@
-#include <Arduino.h>
-#include <SPI.h>
+
 #include <U8x8lib.h>
 
 /* Constructor */
