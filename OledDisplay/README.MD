@@ -10,10 +10,10 @@ https://github.com/olikraus/u8g2
 
 # Pins
 
-A4 -> SDA
-A5 -> SCL
-5V -> VCC
-GND -> GND
+* A4 -> SDA
+* A5 -> SCL
+* 5V -> VCC
+* GND -> GND
 
 # What does it look like?
 
