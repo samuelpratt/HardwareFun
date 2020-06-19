@@ -1,6 +1,6 @@
 # What is this?
 
-Fun with electronics... featuring a Raspberry Pi and and a (clone) Arduino.
+Fun with electronics... featuring a Raspberry Pi, a (clone) Arduino and an ESP32 Dev Board.
 
 Started to pass the time during the early 2020 COVID-19 Lockdown.
 
@@ -26,6 +26,16 @@ I bought this one: https://www.amazon.co.uk/Freenove-Raspberry-Beginner-Processi
 
 Note the instructions tend to be pretty basic and usually don't explain why you're doing what you're doing. I would personally throw them away and do some googling.
 
+## Raspberry Pi
+
+Mine is an elderly 2B. If you buy one the lastest version is 4 and is seriously powerful!
+
+## ESP32
+
+This a dev board based on the ESP32 chipset. It's a bit harder to use than the Arduino but you get 512kb RAM, a Dual core ARM processor, integrated WiFi, an RTC and 4MB flash for ~£6.50, bargain!
+
+Various boards are available. They're all pretty much the same as they're based on a reference design. I got one of these as it was the cheapest at the time: https://www.amazon.co.uk/gp/product/B071JR9WS9
+
 ## WiFi
 
 Depends which board you're using.
@@ -45,3 +55,7 @@ Models >3 have WiFi chips built in.
 For older PIs (mine is a 2B) you'll need a USB dongle. Try here: https://elinux.org/RPi_USB_Wi-Fi_Adapters
 
 Set-up is via raspi-config or directly editing the config files in /etc.
+
+### ESP32
+
+This *is* a WiFi chipset!
