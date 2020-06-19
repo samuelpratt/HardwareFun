@@ -5,7 +5,7 @@ Fun with electronics... featuring a Raspberry Pi and and a (clone) Arduino.
 Started to pass the time during the early 2020 COVID-19 Lockdown.
 
 <img src="Boards.jpg">
-
+<img src="esp32.jpg" style="width:200px;height:200px">
 # Stuff I bought
 
 ## Arduino
